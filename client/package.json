@@ -1,6 +1,6 @@
 {
   "name": "client",
-  "version": "1.0.5-beta.2",
+  "version": "1.0.5-beta.3",
   "homepage": "/",
   "private": true,
   "dependencies": {
