@@ -5,6 +5,7 @@ name = "buho-stocks"
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 version = "1.0.5"
 =======
 version = "1.0.5-beta.2"
@@ -21,6 +22,9 @@ version = "1.0.5-beta.5"
 =======
 version = "1.0.5-beta.6"
 >>>>>>> dd64a8b (chore(release): Update logging configuration and fix stock price fetching)
+=======
+version = "1.0.5"
+>>>>>>> 1812e8b (chore(release): bump version to 1.0.5)
 description = "Application to manage and track a stocks portfolio with dividends and return for a Buy & Hold investment strategy."
 authors = ["Rene Fernandez <renefernandez@duck.com>"]
 license = "GPL-3.0-or-later"
