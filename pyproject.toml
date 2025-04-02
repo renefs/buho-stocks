@@ -12,7 +12,7 @@ python = "^3.10"
 celery = "^5.3.4"
 channels = { extras = ["daphne"], version = "^4.0.0" }
 channels-redis = "^4.1.0"
-django = "^5.1.5"
+django = "^5.1.8"
 django-celery-results = "^2.5.1"
 django-cors-headers = "^3.14.0"
 django-filter = "^22.1"
