@@ -25,7 +25,7 @@
     "@tiptap/pm": "^2.5.9",
     "@tiptap/react": "^2.5.9",
     "@tiptap/starter-kit": "^2.5.9",
-    "axios": "^0.28.0",
+    "axios": "^0.30.0",
     "consola": "^2.15.3",
     "country-flag-icons": "^1.5.5",
     "dayjs": "^1.11.12",
