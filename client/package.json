@@ -101,7 +101,7 @@
     "eslint-plugin-react-hooks": "^4.6.2",
     "eslint-plugin-testing-library": "^6.3.0",
     "eslint-plugin-vitest": "^0.4.1",
-    "happy-dom": "^15.10.2",
+    "happy-dom": "^20.0.0",
     "husky": "^8.0.1",
     "jsdom": "^24.1.1",
     "lint-staged": "^15.2.0",
