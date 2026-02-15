@@ -7,7 +7,10 @@ from faker import Faker
 from buho_backend.tests.base_test_case import BaseApiTestCase
 from exchange_rates.services.exchange_rate_fetcher import ExchangeRateFetcher
 from exchange_rates.tests.factory import ExchangeRateFactory
-from stock_prices.tests.mocks.mock_yfinance import create_empty_download_mock_df
+from stock_prices.tests.mocks.mock_yfinance import (
+    create_download_mock_df,
+    create_empty_download_mock_df,
+)
 
 logger = logging.getLogger("buho_backend")
 
@@ -105,6 +108,10 @@ class ExchangeRateFetcherTestCase(BaseApiTestCase):
         )
 
     def test_get_exchange_rate_not_found_in_db(self):
+        # Set up mock with correct ticker for exchange rate
+        ticker = f"{self.from_currency}{self.to_currency}=X"
+        self.mock_download.return_value = create_download_mock_df(ticker)
+
         service = ExchangeRateFetcher()
         result = service.get_exchange_rate_for_date(
             self.from_currency, self.to_currency, self.not_found_date
