@@ -1,0 +1,24 @@
+version: 2
+updates:
+  # JavaScript/npm dependencies in client folder
+  - package-ecosystem: "npm"
+    directory: "/client"
+    schedule:
+      interval: "weekly"
+    # Group all npm updates into a single PR to reduce noise
+    groups:
+      npm-dependencies:
+        patterns:
+          - "*"
+
+  # Python/pip dependencies
+  - package-ecosystem: "pip"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+
+  # GitHub Actions
+  - package-ecosystem: "github-actions"
+    directory: "/"
+    schedule:
+      interval: "weekly"
