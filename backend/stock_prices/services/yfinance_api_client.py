@@ -11,13 +11,7 @@ from random_user_agent.user_agent import UserAgent
 from redis import Redis
 from requests import Session
 from requests_cache import CacheMixin
-from requests_ratelimiter import (
-    Duration,
-    Limiter,
-    LimiterMixin,
-    MemoryQueueBucket,
-    RequestRate,
-)
+from requests_ratelimiter import Duration, Limiter, LimiterMixin, Rate
 
 from stock_prices.services.types import TypedStockPrice
 
@@ -43,10 +37,7 @@ user_agent = user_agent_rotator.get_random_user_agent()
 
 session = CachedLimiterSession(
     cache_name="yfinance.cache",
-    limiter=Limiter(
-        RequestRate(2, Duration.SECOND * 5)
-    ),  # max 2 requests per 5 seconds
-    bucket_class=MemoryQueueBucket,
+    limiter=Limiter(Rate(2, Duration.SECOND * 5)),  # max 2 requests per 5 seconds
     backend=backend,
 )
 
