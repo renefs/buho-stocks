@@ -7,14 +7,9 @@
   "editor.codeActionsOnSave": {
     "source.fixAll": "explicit"
   },
-  "eslint.validate": [
-    "javascript"
-  ],
+  "eslint.validate": ["javascript"],
   "isort.check": true,
-  "isort.args": [
-    "--profile",
-    "black"
-  ],
+  "isort.args": ["--profile", "black"],
   "[html]": {
     "editor.defaultFormatter": "monosans.djlint"
   },
@@ -29,14 +24,8 @@
   },
   "python.analysis.autoSearchPaths": true,
   "python.analysis.extraPaths": ["backend"],
-  "python.analysis.ignore": [
-    "**/site-packages/**/*.py",
-    "**/migrations/*.py"
-  ],
-  "python.autoComplete.extraPaths": [
-    ".venv",
-    "backend"
-  ],
+  "python.analysis.ignore": ["**/site-packages/**/*.py", "**/migrations/*.py"],
+  "python.autoComplete.extraPaths": [".venv", "backend"],
   "python.terminal.activateEnvInCurrentTerminal": true,
   "python.testing.pytestEnabled": true,
   "[python]": {
@@ -49,6 +38,6 @@
     "**/node_modules": true,
     "**/mypy_cache": true,
     "**/package-lock.json": true,
-    "**/poetry.lock": true,
+    "**/uv.lock": true
   }
 }

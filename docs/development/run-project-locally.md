@@ -25,10 +25,10 @@ Activate Python 3.11 on the local folder:
 pyenv local 3.11
 ```
 
-### Install Poetry
+### Install uv
 
 ```bash
-pip install poetry
+curl -LsSf https://astral.sh/uv/install.sh | sh
 ```
 
 ### Dependencies
@@ -36,13 +36,13 @@ pip install poetry
 Install the Python dependencies:
 
 ```bash
-poetry install
+uv sync --all-extras
 ```
 
 Activate the virtual environment
 
 ```bash
-source ./venv/bin/activate
+source ./.venv/bin/activate
 ```
 
 ### Create a .env file
@@ -62,6 +62,7 @@ python manage.py migrate
 ### Running the application's backend
 
 Backend:
+
 ```bash
 python manage.py runserver
 ```

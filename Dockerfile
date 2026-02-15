@@ -7,10 +7,8 @@ ENV PIP_DISABLE_PIP_VERSION_CHECK 1
 ENV PYTHONDONTWRITEBYTECODE 1
 ENV PYTHONUNBUFFERED 1
 
-ENV POETRY_VERSION 1.5.0
-ENV POETRY_HOME /opt/poetry
-ENV POETRY_VIRTUALENVS_IN_PROJECT true
-ENV POETRY_CACHE_DIR /usr/src/.cache
+ENV UV_COMPILE_BYTECODE=1
+ENV UV_LINK_MODE=copy
 ENV VIRTUAL_ENVIRONMENT_PATH /usr/src/.venv
 
 LABEL org.opencontainers.image.authors='renefernandez@duck.com' \
@@ -24,12 +22,12 @@ LABEL org.opencontainers.image.authors='renefernandez@duck.com' \
 RUN apt-get update
 RUN apt-get install default-libmysqlclient-dev netcat-openbsd gcc pkg-config -y
 
-# Install Poetry and dependencies
-COPY pyproject.toml ./
-COPY poetry.lock ./
+# Install uv
+COPY --from=ghcr.io/astral-sh/uv:latest /uv /uvx /bin/
 
-# Using Poetry to install dependencies without requiring the project main files to be present
-RUN pip install poetry==${POETRY_VERSION} && poetry install --only main --no-root --no-directory
+# Install dependencies
+COPY pyproject.toml uv.lock ./
+RUN uv sync --frozen --no-install-project --no-dev
 
 COPY ./backend /usr/src/app
 COPY ./etc /usr/src/etc

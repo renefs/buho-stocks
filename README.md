@@ -63,7 +63,7 @@ Documentation is available on [Github Pages](https://bocabitlabs.github.io/buho-
 - Redis (message broker & cache)
 - MariaDB (production database)
 - Nginx (reverse proxy)
-- Poetry (Python dependency management)
+- uv (Python dependency management)
 
 ## 📋 Requirements
 
@@ -72,7 +72,7 @@ For local development:
 - Python 3.11
 - Node.js 20
 - Redis
-- Poetry
+- uv
 
 ## 🫂 How to contribute
 
