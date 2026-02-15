@@ -10,9 +10,6 @@
  </a>
 </p>
 <p align="center">
-<img src="./docs/static/img/screenshots/0.0.63-alpha/buho-stocks-portfolio.jpg" alt="Buho Stocks portfolio screen"/>
-</p>
-<p align="center">
   • <a href="#features">Features</a> •
   <a href="#install">Install</a> •
   <a href="#development">Development</a> •
@@ -27,16 +24,16 @@ Using a spreadsheet to manage a portfolio can become a complicated and tedious t
 
 ## 🎁 Features
 
-| Feature  | Implemented |
-|---| --- |
-| Unlimited portfolios  | ✅ |
-| Unlimited companies per portfolio  | ✅ |
-| Support for stock transactions, dividends and rights | ✅ |
-| Unlimited sectors and subsectors | ✅ |
-| Import CSV files from Interactive Brokers | ✅ |
-| Fetch stock prices and exchange rates from a external source in real time. | ✅ |
-| Multiple charts: dividends, returns, sectors, currencies... | ✅ |
-| Support for multiple languages | ✅ |
+| Feature                                                                    | Implemented |
+| -------------------------------------------------------------------------- | ----------- |
+| Unlimited portfolios                                                       | ✅          |
+| Unlimited companies per portfolio                                          | ✅          |
+| Support for stock transactions, dividends and rights                       | ✅          |
+| Unlimited sectors and subsectors                                           | ✅          |
+| Import CSV files from Interactive Brokers                                  | ✅          |
+| Fetch stock prices and exchange rates from a external source in real time. | ✅          |
+| Multiple charts: dividends, returns, sectors, currencies...                | ✅          |
+| Support for multiple languages                                             | ✅          |
 
 ## 📚 Documentation
 
@@ -44,11 +41,38 @@ Documentation is available on [Github Pages](https://bocabitlabs.github.io/buho-
 
 ## ⚛️ Technologies used
 
-- React
-- Django
-- Typescript
-- Mantine (UI)
-- Docker
+### Frontend
+
+- React 18
+- TypeScript
+- Mantine UI 7
+- Vite
+- TanStack Query
+
+### Backend
+
+- Python 3.10+
+- Django 5
+- Django REST Framework
+- Celery (background tasks)
+- Channels (WebSockets)
+
+### Infrastructure
+
+- Docker & Docker Compose
+- Redis (message broker & cache)
+- MariaDB (production database)
+- Nginx (reverse proxy)
+- Poetry (Python dependency management)
+
+## 📋 Requirements
+
+For local development:
+
+- Python 3.11
+- Node.js 20
+- Redis
+- Poetry
 
 ## 🫂 How to contribute
 
@@ -80,15 +104,4 @@ If you like this project — or just feeling generous, consider buying me a beer
 
 ## 🖼️ Screenshots
 
-<p align="center">
-<img src="./docs/static/img/screenshots/0.0.63-alpha/buho-stocks-portfolio.jpg" alt="Buho Stocks portfolio screen"/>
-</p>
-<p align="center">
-<img src="./docs/static/img/screenshots/0.0.63-alpha/buho-stocks-portfolio-2.jpg" alt="Buho Stocks portfolio screen companies"/>
-</p>
-<p align="center">
-<img src="./docs/static/img/screenshots/0.0.63-alpha/buho-stocks-company.jpg" alt="Buho Stocks company screen"/>
-</p>
-<p align="center">
-<img src="./docs/static/img/screenshots/0.0.63-alpha/buho-stocks-portfolio-list.jpg" alt="Buho Stocks portfolio list screen"/>
-</p>
+See the [documentation](https://bocabitlabs.github.io/buho-stocks/) for screenshots and usage examples.
