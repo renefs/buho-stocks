@@ -35,4 +35,4 @@ jobs:
           tags: |
             ghcr.io/${{ github.repository }}-client:latest
           labels: |
-            org.opencontainers.image.source=https://github.com/bocabitlabs/${{ github.repository }}
+            org.opencontainers.image.source=https://github.com/${{ github.repository }}
