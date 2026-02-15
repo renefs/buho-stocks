@@ -29,27 +29,11 @@ class YFinanceExchangeClient:
         # Get the close value for the first key of the dict
         logger.debug((exchange_rate_dict[0]))
         if exchange_rate_dict and exchange_rate_dict[0]:
-<<<<<<< HEAD
-<<<<<<< HEAD
             first_date = list(exchange_rate_dict[0].keys())[
                 0
             ]  # Get the first column name
             logger.debug(first_date)
             value = exchange_rate_dict[0][first_date][("Close", ticker)]
-=======
-            first_column = list(exchange_rate_dict[0].keys())[
-                0
-            ]  # Get the first column name
-            logger.debug(first_column)
-            value = exchange_rate_dict[0][first_column][("Close", ticker)]
->>>>>>> ddcc41e (refactor(yfinance): update exchange rate retrieval and simplify type annotations)
-=======
-            first_date = list(exchange_rate_dict[0].keys())[
-                0
-            ]  # Get the first column name
-            logger.debug(first_date)
-            value = exchange_rate_dict[0][first_date][("Close", ticker)]
->>>>>>> 60198b7 (fix(yfinance): correct variable naming for clarity in exchange rate retrieval)
 
             # Return as formatted dict
             parsed_dict = self.exchange_rate_as_dict(
