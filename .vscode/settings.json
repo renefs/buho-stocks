@@ -1,15 +1,17 @@
 {
   "editor.formatOnSave": true,
-  "files.associations": {
-    "*.html": "jinja-html",
-    "*.xml": "jinja-xml"
+  "biome.lsp.bin": {
+    "win32-x64": "./client/node_modules/@biomejs/cli-win32-x64/biome.exe",
+    "linux-x64": "./client/node_modules/@biomejs/cli-linux-x64/biome",
+    "linux-arm64": "./client/node_modules/@biomejs/cli-linux-arm64/biome",
+    "linux-x64-musl": "./client/node_modules/@biomejs/cli-linux-x64-musl/biome",
+    "linux-arm64-musl": "./client/node_modules/@biomejs/cli-linux-arm64-musl/biome",
+    "darwin-x64": "./client/node_modules/@biomejs/cli-darwin-x64/biome",
+    "darwin-arm64": "./client/node_modules/@biomejs/cli-darwin-arm64/biome"
   },
   "editor.codeActionsOnSave": {
     "source.fixAll": "explicit"
   },
-  "eslint.validate": ["javascript"],
-  "isort.check": true,
-  "isort.args": ["--profile", "black"],
   "[html]": {
     "editor.defaultFormatter": "monosans.djlint"
   },
@@ -31,6 +33,19 @@
   "[python]": {
     "editor.codeActionsOnSave": {
       "source.organizeImports": "explicit"
+    }
+  },
+  "[typescript]": {
+    "editor.defaultFormatter": "biomejs.biome",
+    "editor.codeActionsOnSave": {
+      "source.organizeImports": "explicit",
+      "source.fixAll": "explicit",
+      "source.action.useSortedAttributes.biome": "explicit",
+      "source.action.useSortedProperties.biome": "explicit",
+      "source.action.useSortedKeys.biome": "explicit",
+      "source.organizeImports.biome": "explicit",
+      "source.fixAll.biome": "explicit",
+      "source.removeUnusedImports": "explicit"
     }
   },
   "search.exclude": {

@@ -4,7 +4,6 @@ import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react";
 import viteTsconfigPaths from "vite-tsconfig-paths";
 import svgr from "vite-plugin-svgr";
-import eslint from "vite-plugin-eslint";
 
 export default ({ command, mode }) => {
   return defineConfig({
@@ -12,7 +11,6 @@ export default ({ command, mode }) => {
     react(),
     viteTsconfigPaths(),
     svgr(),
-    eslint(),
     ],
     test: {
       globals: true,
