@@ -1,0 +1,13 @@
+{
+	"folders": [
+		{
+			"path": "."
+		}
+	],
+	"settings": {
+		"files.associations": {
+			"*.html": "jinja-html",
+			"*.xml": "jinja-xml"
+		},
+	}
+}
