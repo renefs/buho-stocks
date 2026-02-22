@@ -34,7 +34,7 @@ jobs:
           uv run coverage report
           uv run coverage xml
       - name: Upload coverage to Codecov
-        uses: codecov/codecov-action@v4
+        uses: codecov/codecov-action@v5
         with:
           token: ${{ secrets.CODECOV_TOKEN }} # required
           verbose: true # optional (default = false)
